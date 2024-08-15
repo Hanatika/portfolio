@@ -3,16 +3,15 @@ import base64
 from streamlit_option_menu import option_menu
 import requests
 
-st.set_page_config(page_icon='🧕', layout='wide' )
+st.set_page_config(page_icon='🧕', layout='wide', initial_sidebar_state="auto")
+# Menyisipkan CSS untuk memaksa light mode
 st.markdown(
     """
     <style>
         /* Memaksa tampilan light mode */
         body {
-            background-color: #ffffff; /* Warna latar belakang halaman */
-            color: #000000; /* Warna teks */
-            margin: 0;
-            padding: 0;
+            background-color: #ffffff; /* Warna latar belakang putih */
+            color: #000000; /* Warna teks hitam */
         }
         .css-1d391kg {
             background-color: #ffffff; /* Warna latar belakang light untuk sidebar */
@@ -21,25 +20,12 @@ st.markdown(
         .css-1bymd8g {
             color: #000000; /* Warna teks light untuk header dan elemen lainnya */
         }
-        
-        /* Latar belakang tambahan */
-        .custom-background {
-            background-image: url('https://example.com/background.jpg'); /* URL gambar latar belakang */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1; /* Agar latar belakang tidak menutupi konten */
-        }
+        /* Tambahkan aturan CSS lainnya sesuai kebutuhan untuk memastikan light mode */
     </style>
-    <div class="custom-background"></div>
     """,
     unsafe_allow_html=True
 )
+
 # Hero Section
 
 st.title("Muhana Atikah")
@@ -254,4 +240,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
