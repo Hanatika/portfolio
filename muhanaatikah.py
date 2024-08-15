@@ -4,60 +4,6 @@ from streamlit_option_menu import option_menu
 import requests
 
 st.set_page_config(page_icon='🧕', layout='wide' )
-st.markdown(
-    """
-    <style>
-        /* Memaksa tampilan light mode */
-        body {
-            background-color: #ffffff; /* Warna latar belakang halaman */
-            color: #000000; /* Warna teks */
-            margin: 0;
-            padding: 0;
-        }
-        .css-1d391kg {
-            background-color: #ffffff; /* Warna latar belakang light untuk sidebar */
-            color: #000000; /* Warna teks hitam untuk sidebar */
-        }
-        .css-1bymd8g {
-            color: #000000; /* Warna teks light untuk header dan elemen lainnya */
-        }
-        
-        /* Latar belakang tambahan */
-        .custom-background {
-            background-image: url('https://example.com/background.jpg'); /* URL gambar latar belakang */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1; /* Agar latar belakang tidak menutupi konten */
-        }
-    </style>
-    <div class="custom-background"></div>
-    """,
-    unsafe_allow_html=True
-)
-
-# Membaca file gambar
-with open("assets/pexels.jpg", "rb") as image_file:
-    encoded_string = base64.b64encode(image_file.read()).decode()
-
-# Menambahkan CSS untuk mengganti background
-background_style = f"""
-    <style>
-    .stApp {{
-        background-image: url("data:image/jpg;base64,{encoded_string}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }}
-    </style>
-    """
-
-st.markdown(background_style, unsafe_allow_html=True)
 
 # Hero Section
 
