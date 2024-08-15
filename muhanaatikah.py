@@ -2,9 +2,6 @@ import streamlit as st
 import base64
 from streamlit_option_menu import option_menu
 import requests
-from streamlit_lottie import st_lottie
-from PIL import Image 
-import webbrowser
 
 st.set_page_config(page_icon='🧕', layout='wide' )
 
